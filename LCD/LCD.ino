@@ -65,7 +65,7 @@ void loop() {
     }
     if (time != pretime){
       if (time - pretime < 1000){
-        off = true;
+        off = true;      //comment nếu chỉ đổi nhiệt độ c -> f
         lcd.noDisplay();
         lcd.noBacklight();
       }
