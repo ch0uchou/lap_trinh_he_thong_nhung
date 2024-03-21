@@ -56,6 +56,7 @@ void loop() {
       } 
     }
     press=digitalRead(button);
+    Serial.println(press);
     if (prepress != press){
       prepress = press;
       if (press == check){
@@ -64,14 +65,14 @@ void loop() {
       }
     }
     if (time != pretime){
-      if (time - pretime < 1000){
+      if (time - pretime < 700){
         off = true;      //comment nếu chỉ đổi nhiệt độ c -> f
         lcd.noDisplay();
         lcd.noBacklight();
       }
-      Serial.println(time);
-      Serial.println(pretime);
-      Serial.println(time - pretime);
+      // Serial.println(time);
+      // Serial.println(pretime);
+      // Serial.println(time - pretime);
       pretime = time;
     }
   }

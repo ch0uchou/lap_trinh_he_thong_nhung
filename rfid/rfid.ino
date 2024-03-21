@@ -8,6 +8,7 @@
 int acceptedIDs[MAX_IDS][4] = {
     {147, 156, 218, 17},
     {19, 254, 158, 169},
+    {96, 113, 45, 26}
 };
 
 int led = 8;                                        // Pin số 8 kết nối với đèn LED

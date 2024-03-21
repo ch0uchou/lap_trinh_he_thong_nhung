@@ -1,6 +1,8 @@
 // pin dht 3
 // ghi file vcc 5v, gnd, MISO 12, MOSI 11, SCK 13, CS 10
 // RTC đọc thời gian vcc 5v, gnd, SDA - A4, SCL - A5
+
+//dòng 55 ghi đè, dòng 110 ghi nhiệt độ mỗi 10s ra file, dòng 113 ghi nhiệt độ khi nhiệt độ thay đổi
 #include <SPI.h>
 #include <SD.h>
 #include<Wire.h>
@@ -50,7 +52,7 @@ void setup()
   dht.begin();
 
 
-  // SD.remove("TEST123.txt");      //uncomment nếu ghi đè
+  SD.remove("TEST123.txt");      //uncomment nếu ghi đè
 }
 
 void writefile(String file, float temp, int Delay){
